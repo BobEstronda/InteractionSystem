@@ -16,6 +16,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "InteractionSubsystem.h"
 #include "PlayerInteractionComponent.generated.h"
 
 class UInteractableComponent;
@@ -44,6 +45,11 @@ protected:
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 
 public:	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interaction")
+	EInteractionAimMode AimMode = EInteractionAimMode::CameraForward;
+
+	FVector ExternalAimDirection = FVector::ForwardVector;
+
 	UPROPERTY(BlueprintAssignable, Category = "Interaction")
 	FOnBestInteractableChanged OnBestInteractableChanged;
 
@@ -59,7 +65,14 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Interaction")
 	FVector GetCameraForward() const;
 
+	EInteractionAimMode GetAimMode() const { return AimMode; }
+
+	FVector GetExternalAimDirection() const { return ExternalAimDirection; }
+
 	// Called by subsystem
 	void SetBestInteractable(UInteractableComponent* NewBest);
+
+	UFUNCTION(BlueprintCallable, Category = "Interaction")
+	void SetExternalAimDirection(FVector NewDirection) { ExternalAimDirection = NewDirection; }
 		
 };
