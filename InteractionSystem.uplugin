@@ -10,6 +10,7 @@
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
+	"EngineVersion": "5.8.0",
 	"CanContainContent": true,
 	"IsBetaVersion": true,
 	"IsExperimentalVersion": false,
@@ -18,12 +19,14 @@
 		{
 			"Name": "InteractionSystem",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		},
-		{
-			"Name": "InteractionSystemEditor",
-			"Type": "Editor",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64" ]
 		}
-	]
+	]//,
+	////"Plugins": [
+	////	{
+	////		"Name": "ConditionSystem",
+	////		"Enabled": true
+	////	}
+	//]
 }

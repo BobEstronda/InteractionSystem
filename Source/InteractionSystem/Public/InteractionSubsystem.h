@@ -18,6 +18,10 @@
 #include "Subsystems/WorldSubsystem.h"
 #include "InteractableComponent.h"
 #include "InteractionBlockerComponent.h"
+#include "GameFramework/Actor.h"
+#include "GameFramework/Pawn.h"
+#include "Engine/World.h"
+#include "Math/GenericOctree.h"
 #include "InteractionSubsystem.generated.h"
 
 class UPlayerInteractionComponent;

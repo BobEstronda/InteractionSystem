@@ -18,6 +18,8 @@
 #include "PlayerInteractionComponent.h"
 #include "InteractableComponent.h"
 #include "InteractionBlockerComponent.h"
+#include "Components/PrimitiveComponent.h"
+#include "Engine.h"
 #include "DrawDebugHelpers.h"
 #include "HAL/IConsoleManager.h"
 #include "InteractionSettings.h"
@@ -52,7 +54,7 @@ static TAutoConsoleVariable<int32> CVarInteractionDebugRegistered(
 static TAutoConsoleVariable<int32> CVarInteractionDebugStats(
 	TEXT("interaction.debug.stats"),
 	0,
-	TEXT("0 = off, 1 = on. Shows an on-screen performance breakdown (µs) of the interaction system: total tick cost and cost of individual phases/methods."),
+	TEXT("0 = off, 1 = on. Shows an on-screen performance breakdown (us) of the interaction system: total tick cost and cost of individual phases/methods."),
 	ECVF_Cheat);
 
 static TAutoConsoleVariable<int32> CVarInteractionDebugLog(
