@@ -10,7 +10,6 @@
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"EngineVersion": "5.8.0",
 	"CanContainContent": true,
 	"IsBetaVersion": true,
 	"IsExperimentalVersion": false,
@@ -22,11 +21,5 @@
 			"LoadingPhase": "Default",
 			"PlatformAllowList": [ "Win64" ]
 		}
-	]//,
-	////"Plugins": [
-	////	{
-	////		"Name": "ConditionSystem",
-	////		"Enabled": true
-	////	}
-	//]
+	]
 }
